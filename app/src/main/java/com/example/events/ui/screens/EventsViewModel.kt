@@ -16,7 +16,7 @@ class EventsViewModel : ViewModel() {
     val uiEventsState: StateFlow<EventsUiState> = _uiEventsState
 
     private val _uiNewItemTextState = MutableStateFlow("")
-    val uiNewItemTextState = _uiNewItemTextState
+    val uiNewItemTextState: StateFlow<String> = _uiNewItemTextState
 
     init {
         initializeUiState()
