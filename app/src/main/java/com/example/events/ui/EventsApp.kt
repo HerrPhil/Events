@@ -55,7 +55,8 @@ fun EventsApp() {
 
     val viewModel: EventsViewModel = viewModel()
     val eventsUiState = viewModel.uiEventsState.collectAsState().value
-    val newItemTextUiState = viewModel.uiNewItemTextState.collectAsState().value
+//    val newItemTextUiState = viewModel.uiNewItemTextState.collectAsState().value
+    val newItemTextUiState = viewModel.uiNewItemTextState.value
 
     val onValueChangedUsingViewModel: (String) -> Unit = { viewModel.setNewItemText(it) }
     val onResetNewItemTextUsingViewModel: () -> Unit = { viewModel.resetNewItemText() }
